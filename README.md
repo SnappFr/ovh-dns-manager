@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![PyInstaller](https://img.shields.io/badge/PyInstaller-Binary-orange)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker&logoColor=white)
 
 A CLI tool for managing DNS entries on domains hosted at OVH, built with [Rich](https://github.com/Textualize/rich) for a beautiful interactive terminal experience.
 
@@ -17,6 +17,18 @@ flowchart TB
     OVH --> Delete[Delete records]
     OVH --> Refresh[Refresh zone]
 ```
+
+## 📑 Table of Contents
+
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#️-installation)
+- [Configuration](#-configuration-ovh-api-credentials)
+- [Security](#-security)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Author](#-author)
+- [Contributors](#-contributors)
 
 ## 🚀 Features
 
@@ -40,6 +52,18 @@ flowchart TB
 
 ```bash
 uv tool install git+https://github.com/SnappFr/ovh-dns-manager.git
+```
+
+### Via Docker
+
+```bash
+docker run --rm -it \
+  -e OVH_ENDPOINT=ovh-eu \
+  -e OVH_APPLICATION_KEY=your_key \
+  -e OVH_APPLICATION_SECRET=your_secret \
+  -e OVH_CONSUMER_KEY=your_consumer_key \
+  -e OVH_DOMAIN=example.com \
+  ghcr.io/snappfr/ovh-dns-manager
 ```
 
 ### Via pipx
@@ -127,7 +151,7 @@ docker run --rm \
   -e OVH_APPLICATION_SECRET=your_secret \
   -e OVH_CONSUMER_KEY=your_consumer_key \
   -e OVH_DOMAIN=example.com \
-  ovh-dns-manager
+  ghcr.io/snappfr/ovh-dns-manager
 ```
 
 ### Credentials Manager

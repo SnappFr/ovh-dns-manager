@@ -3,6 +3,13 @@
 FROM python:3.13-alpine
 COPY --from=ghcr.io/astral-sh/uv:0.9.26@sha256:9a23023be68b2ed09750ae636228e903a54a05ea56ed03a934d00fe9fbeded4b /uv /uvx /bin/
 
+LABEL org.opencontainers.image.title="OVH DNS Manager" \
+      org.opencontainers.image.description="A CLI tool for managing DNS entries via OVH API" \
+      org.opencontainers.image.url="https://github.com/SnappFr/ovh-dns-manager" \
+      org.opencontainers.image.source="https://github.com/SnappFr/ovh-dns-manager" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.vendor="Snapp'"
+
 WORKDIR /app
 
 # Install dependencies only (cached layer, rebuilds only when lock changes)
