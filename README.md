@@ -18,6 +18,18 @@ flowchart TB
     OVH --> Refresh[Refresh zone]
 ```
 
+## 📑 Table of Contents
+
+- [Features](#-features)
+- [Prerequisites](#-prerequisites)
+- [Installation](#️-installation)
+- [Configuration](#-configuration-ovh-api-credentials)
+- [Security](#-security)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Author](#-author)
+- [Contributors](#-contributors)
+
 ## 🚀 Features
 
 | Feature | Description |
